@@ -1,0 +1,88 @@
+unidade de pacote;
+
+classe pública CalcularImposto {
+
+	salarioBruto duplo privado;
+	inss duplos privados;
+	duplo irrf privado;
+
+	CalcularImposto público (double salarioBruto) {
+		this.salarioBruto = salarioBruto;
+		this.inss = 0;
+		this.irrf = 0;
+
+	}
+
+	public double CalcularDescInss () {
+         
+              if (this.salarioBruto <= 1693.72) {
+			this.inss = this.salarioBruto * 0,08;
+
+		}
+
+		else if (this.salarioBruto> = 1693.72 && this.salarioBruto <= 2822.90) {
+			this.inss = this.salarioBruto * 0,09;
+		
+
+		} else if (this.salarioBruto> = 2822.90 && this.salarioBruto <= 5645.80) {
+			this.inss = this.salarioBruto * 0.11;
+		
+
+		}
+		return this.inss;
+
+	}
+
+
+
+
+
+		
+	dupla pública CalcularDescIrrf () {
+
+	if (this.salarioBruto> = 1903.99 && this.salarioBruto <= 2826.65) {
+			this.irrf = this.salarioBruto * 0,075;
+
+		} else if (this.salarioBruto> = 2826.66 && this.salarioBruto <= 3751.05) {
+			this.irrf = this.salarioBruto * 0,15;
+
+		} else if (this.salarioBruto> = 3751.06 && this.salarioBruto <= 4664.68) {
+			this.irrf = this.salarioBruto * 0,225;
+	
+
+		} else if (this.salarioBruto> 4664.68) {
+			this.irrf = this.salarioBruto * 0,275;
+		
+		}
+		return this.irrf;
+
+	}
+	
+
+	
+
+	public double getInss () {
+		retorno inss;
+	}
+
+	public void setInss (double inss) {
+		this.inss = inss;
+	}
+
+	public double getSalarioBruto () {
+		return salarioBruto;
+	}
+
+	public void setSalarioBruto (double salarioBruto) {
+		this.salarioBruto = salarioBruto;
+	}
+
+	public double getIrrf () {
+		retorno irrf;
+	}
+
+	public void setIrrf (double irrf) {
+		this.irrf = irrf;
+	}
+
+}

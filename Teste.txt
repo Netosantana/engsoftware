@@ -1,0 +1,63 @@
+unidade de pacote;
+
+import static org.junit.jupiter.api.Assertions. *;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+public class TesteUnitario {
+
+	@Teste
+	public void ResultadoTeste1 () {
+
+		CalcularImposto x = novo CalcularImposto (1903.99);
+		x.CalcularDescInss ();
+
+		assertEquals (142.80, X.getInss (), 1);
+
+		CalcularImposto z = new CalcularImposto (1500);
+		z.CalcularDescIrrf ();
+
+		assertEquals (120.00, z.getIrrf (), 1);
+
+	}
+
+	@Teste
+	public void ResultadoTeste2 () {
+
+		CalcularImposto x = new CalcularImposto (2365,33);
+		x.CalcularDescInss ();
+
+		assertEquals (x.getInss (), 177.40, 1);
+
+		CalcularImposto z = new CalcularImposto (2365,33);
+		z.CalcularDescIrrf ();
+
+		assertEquals (z.getIrrf (), 212.88, 1);
+	}
+
+	@Teste
+	public void ResultadoTeste3 () {
+
+		CalcularImposto x = novo CalcularImposto (3000);
+		x.CalcularDescInss ();
+		assertEquals (x.getInss (), 450);
+		CalcularImposto z = new CalcularImposto (3000);
+		z.CalcularDescIrrf ();
+		assertEquals (z.getIrrf (), 330);
+	}
+
+	@Teste
+	public void ResultadoTeste4 () {
+
+		CalcularImposto x = new CalcularImposto (5000);
+		x.CalcularDescInss ();
+		assertEquals (x.getInss (), 1375);
+		
+	}
+
+
+}
